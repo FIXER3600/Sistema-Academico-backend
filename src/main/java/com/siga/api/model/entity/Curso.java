@@ -22,7 +22,14 @@ public class Curso {
 	
 	@Column
 	private String nome;
-
+	
+	@Column
+	private int limite_alunos;
+	
+	@Column
+	private int carga_horaria;
+	
+	
 	public int getCodigo() {
 		return codigo;
 	}
@@ -38,6 +45,23 @@ public class Curso {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
+	public int getLimite_alunos() {
+		return limite_alunos;
+	}
+
+	public void setLimite_alunos(int limite_alunos) {
+		this.limite_alunos = limite_alunos;
+	}
+
+	public int getCarga_horaria() {
+		return carga_horaria;
+	}
+
+	public void setCarga_horaria(int carga_horaria) {
+		this.carga_horaria = carga_horaria;
+	}
+	
 	
 	
 }

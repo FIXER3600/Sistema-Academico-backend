@@ -73,7 +73,7 @@ public class AlunoMediaService {
 	
 	private JasperPrint getJasperPrint(String codigoDisciplina, String nomeDisciplina) {
 
-		String urlImagem = "C:\\Users\\Guilherme\\SigaII\\src\\main\\resources\\logotipo1.png";
+		String urlImagem = "D:\\Desenvolvimento\\Sistema-Academico-backend\\src\\main\\resources\\logotipo1.png";
 
 		try {
 			Connection connection = dataSource.getConnection();

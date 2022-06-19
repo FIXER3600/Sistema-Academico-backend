@@ -15,14 +15,14 @@ VALUES ('Lucas Akira', 1),
 GO
 
 INSERT INTO Disciplina(CodigoCurso, Codigo, Nome, Sigla, Turno, NumAulas)
-VALUES (1, '4203-010', 'Arquitetura e Organização de Computadores', 'AOC', 'T', '4'),
-	   (1, '4203-020', 'Arquitetura e Organização de Computadores', 'AOC', 'N', '4'),
-	   (1,'4208-010', 'Laboratório de Hardware', 'LDH', 'T', '4'),
+VALUES (1, '4203-010', 'Arquitetura e Organizaï¿½ï¿½o de Computadores', 'AOC', 'T', '4'),
+	   (1, '4203-020', 'Arquitetura e Organizaï¿½ï¿½o de Computadores', 'AOC', 'N', '4'),
+	   (1,'4208-010', 'Laboratï¿½rio de Hardware', 'LDH', 'T', '4'),
 	   (1,'4226-004', 'Banco de Dados', 'BDD', 'T', '4'),
 	   (1,'4213-003', 'Sistemas Operacionais I', 'SOI', 'T', '4'),
 	   (1,'4213-013', 'Sistemas Operacionais I', 'SOI', 'N', '4'),
-	   (1,'4233-005', 'Laboratório de Banco de Dados', 'LBD', 'T', '4'),
-	   (2,'5005-220', 'Métodos Para a Produção do Conhecimento', 'MPC', 'T', '4')
+	   (1,'4233-005', 'Laboratï¿½rio de Banco de Dados', 'LBD', 'T', '4'),
+	   (2,'5005-220', 'Mï¿½todos Para a Produï¿½ï¿½o do Conhecimento', 'MPC', 'T', '4')
 GO
 
 SELECT * FROM Disciplina
@@ -58,7 +58,7 @@ VALUES
 	('4233-005', 'P1', 0.33),
 	('4233-005', 'P2', 0.33),
 	('4233-005', 'P3', 0.33),
-	--Métodos Para a Produção do Conhecimento - COMEX T
+	--Mï¿½todos Para a Produï¿½ï¿½o do Conhecimento - COMEX T
 	('5005-220', 'MC', 0.8),
 	('5005-220', 'MR', 0.2)
 	   
@@ -83,7 +83,7 @@ VALUES
 	--Lab banco de dados T
 	('4233-005', 'E', 1),
 
-	--Métodos Para a Produção do Conhecimento - COMEX T
+	--Mï¿½todos Para a Produï¿½ï¿½o do Conhecimento - COMEX T
 	('5005-220', 'E',1)
 
 GO
@@ -92,18 +92,17 @@ SELECT * FROM Avaliacao
 
 INSERT INTO Aluno_Disciplina(RaAluno, CodigoDisciplina)
 values 
-		(2009,'4208-010'),
-		(2010,'4208-010'),
-		(2011,'4208-010'),
-		(2013,'4208-010'),
-		(2014,'4208-010'),
-		(2009, '4203-010'),
-		(2010, '4203-010'),
-		(2011, '4233-005'),
-		(2012, '4208-010'),
-		(2013, '4213-013'),
-		(2014, '4213-013'),
-		(2015, '5005-220')
+		(1001,'4208-010'),
+		(1002,'4208-010'),
+		(1003,'4208-010'),
+		(1004,'4208-010'),
+		(1005,'4208-010'),
+		(1001, '4203-010'),
+		(1002, '4203-010'),
+		(1003, '4233-005'),
+		(1005, '4213-013'),
+		(1006, '4213-013'),
+		(1007, '5005-220')
 
 INSERT INTO Aluno_Disciplina(RaAluno, CodigoDisciplina)
 values (2010, '4213-003')

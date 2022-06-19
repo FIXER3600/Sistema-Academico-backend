@@ -22,7 +22,6 @@ import lombok.ToString;
 @Embeddable
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString

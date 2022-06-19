@@ -4,9 +4,11 @@ GO
 USE Siga
 GO
 
-CREATE TABLE Curso(
+CREATE DROP TABLE Curso(
 Codigo		INT	IDENTITY         NOT NULL,
 Nome		VARCHAR(100)         NOT NUll,
+Limite_alunos INT NOT NULL,
+Carga_horaria INT NOT NULL,
 PRIMARY KEY (Codigo),
 )
 GO
@@ -34,11 +36,12 @@ FOREIGN KEY (CodigoCurso) REFERENCES Curso (Codigo),
 )
 GO
 
-CREATE TABLE Aluno_Disciplina(
+CREATE ALTER TABLE Aluno_Disciplina(
+Id INT IDENTITY(1, 1) NOT NULL UNIQUE,
 RaAluno				INT		NOT NULL,
 CodigoDisciplina	CHAR(8) NOT NULL,
 
-PRIMARY KEY(RaAluno, CodigoDisciplina),
+PRIMARY KEY(Id),
 FOREIGN KEY (RaAluno) REFERENCES Aluno (Ra),
 FOREIGN KEY (CodigoDisciplina) REFERENCES Disciplina (Codigo),
 )

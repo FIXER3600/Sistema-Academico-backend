@@ -22,7 +22,6 @@ import lombok.ToString;
 @Table(name = "Faltas")
 @Getter 
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString

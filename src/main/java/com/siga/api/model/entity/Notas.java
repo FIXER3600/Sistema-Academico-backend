@@ -18,7 +18,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-@NoArgsConstructor
 @Table(name="Notas")
 public class Notas {
 

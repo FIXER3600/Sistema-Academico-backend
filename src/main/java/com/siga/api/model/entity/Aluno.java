@@ -12,7 +12,9 @@ import javax.persistence.Table;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;
+import org.springframework.lang.Nullable;
 
 @Entity
 @Table(name = "Aluno")
@@ -45,7 +47,7 @@ public class Aluno {
 	
 	@Column
 	private String nome;
-	
+
 	@ManyToOne(targetEntity = Curso.class)
 	@JoinColumn(name = "CodigoCurso")
 	private Curso curso;

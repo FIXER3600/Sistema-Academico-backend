@@ -1,7 +1,6 @@
 package com.siga.api.controller;
 
 
-import com.siga.api.domain.repository.AlunoRepository;
 import com.siga.api.domain.service.AlunoService;
 import com.siga.api.domain.service.MatriculaService;
 import com.siga.api.model.entity.Matricula;
@@ -23,6 +22,7 @@ public class MatriculaController {
 
     @Autowired
     AlunoService alunoService;
+
 
     @GetMapping
     public ResponseEntity<List<Matricula>> getAll() {

@@ -24,6 +24,12 @@ public class DisciplinaController {
 	public List<Disciplina> getDisciplinas(){
 		return disciplinaRepository.findAll();
 	}
+
+	@GetMapping("/curso/{codigo}")
+	public ResponseEntity<Disciplina> getByCodigo(@PathVariable String codigo) {
+		Disciplina disciplina = disciplinaRepository.getById(codigo);
+		return ResponseEntity.ok().body(disciplina);
+	}
 	
 	@GetMapping("/curso/{codigoCurso}")
 	public List<Disciplina> getDisciplinaByCurso(@PathVariable int codigoCurso){

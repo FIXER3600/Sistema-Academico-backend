@@ -36,10 +36,12 @@ FOREIGN KEY (CodigoCurso) REFERENCES Curso (Codigo),
 )
 GO
 
-CREATE ALTER TABLE Aluno_Disciplina(
-Id INT IDENTITY(1, 1) NOT NULL UNIQUE,
+CREATE TABLE Aluno_Disciplina(
+Id                  INT IDENTITY(1, 1) NOT NULL UNIQUE,
 RaAluno				INT		NOT NULL,
+NomeAluno           VARCHAR(100) NOT NULL,
 CodigoDisciplina	CHAR(8) NOT NULL,
+NomeDisciplina      VARCHAR(100) NOT NULL,
 
 PRIMARY KEY(Id),
 FOREIGN KEY (RaAluno) REFERENCES Aluno (Ra),

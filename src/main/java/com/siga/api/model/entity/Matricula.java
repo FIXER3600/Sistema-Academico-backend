@@ -19,7 +19,11 @@ public class Matricula {
     private Integer id;
     @Column(name = "RaAluno")
     private Integer raAluno;
+    @Column(name = "NomeAluno")
+    private String nomeAluno;
     @Column(name = "CodigoDisciplina")
     private String codigoDisciplina;
+    @Column(name = "NomeDisciplina")
+    private String nomeDisciplina;
 
 }

@@ -21,6 +21,7 @@ public class MatriculaService {
         return matriculaRepository.getById(id);
     }
 
+
     public Matricula saveMatricula(Matricula matricula) {
         return matriculaRepository.save(matricula);
     }

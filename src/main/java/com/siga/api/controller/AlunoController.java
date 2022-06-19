@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.siga.api.domain.repository.CursoRepository;
 import com.siga.api.model.entity.Curso;
+import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +26,12 @@ public class AlunoController {
 	@GetMapping
 	public List<Aluno> getAlunos(){
 		return alunoRepository.findAll();
+	}
+
+	@GetMapping("/aluno/{ra}")
+	public ResponseEntity<Aluno> getByRa(@PathVariable Integer ra) {
+		Aluno aluno = alunoRepository.getById(ra);
+		return ResponseEntity.ok().body(aluno);
 	}
 	
 	@GetMapping("/disciplina/{codigoDisciplina}")

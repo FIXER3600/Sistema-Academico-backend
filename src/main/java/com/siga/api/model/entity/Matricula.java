@@ -19,8 +19,12 @@ public class Matricula {
     private Integer id;
     @Column(name = "RaAluno")
     private Integer raAluno;
+    @Column(name = "NomeAluno")
+    private String nomeAluno;
     @Column(name = "CodigoDisciplina")
     private String codigoDisciplina;
+    @Column(name = "NomeDisciplina")
+    private String nomeDisciplina;
 	public Integer getId() {
 		return id;
 	}
@@ -33,13 +37,23 @@ public class Matricula {
 	public void setRaAluno(Integer raAluno) {
 		this.raAluno = raAluno;
 	}
+	public String getNomeAluno() {
+		return nomeAluno;
+	}
+	public void setNomeAluno(String nomeAluno) {
+		this.nomeAluno = nomeAluno;
+	}
 	public String getCodigoDisciplina() {
 		return codigoDisciplina;
 	}
 	public void setCodigoDisciplina(String codigoDisciplina) {
 		this.codigoDisciplina = codigoDisciplina;
 	}
-    
-    
+	public String getNomeDisciplina() {
+		return nomeDisciplina;
+	}
+	public void setNomeDisciplina(String nomeDisciplina) {
+		this.nomeDisciplina = nomeDisciplina;
+	}
 
 }

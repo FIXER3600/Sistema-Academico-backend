@@ -1,7 +1,9 @@
 package com.siga.api.controller;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.siga.api.domain.repository.CursoRepository;
 import com.siga.api.model.entity.Curso;
@@ -22,6 +24,9 @@ public class AlunoController {
 	@Autowired
 	private AlunoRepository alunoRepository;
 
+	@Autowired
+	CursoRepository cursoRepository;
+
 	
 	@GetMapping
 	public List<Aluno> getAlunos(){
@@ -32,6 +37,15 @@ public class AlunoController {
 	public ResponseEntity<Aluno> getByRa(@PathVariable Integer ra) {
 		Aluno aluno = alunoRepository.getById(ra);
 		return ResponseEntity.ok().body(aluno);
+	}
+
+	@GetMapping("aluno/curso/{codigoCurso}")
+	public ResponseEntity<List<Aluno>> getByCurso(@PathVariable Integer codigoCurso) {
+		Curso curso = cursoRepository.getById(codigoCurso);
+		List<Aluno> alunos = alunoRepository.findAll();
+		alunos = alunos.stream()
+				.filter(aluno -> aluno.getCurso().equals(curso)).collect(Collectors.toList());
+		return ResponseEntity.ok().body(alunos);
 	}
 	
 	@GetMapping("/disciplina/{codigoDisciplina}")

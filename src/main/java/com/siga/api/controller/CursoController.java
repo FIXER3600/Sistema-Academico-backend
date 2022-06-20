@@ -24,7 +24,7 @@ public class CursoController {
 		return cursoRepository.findAll();
 	}
 
-	@GetMapping("curso/{codigo}")
+	@GetMapping("/curso/{codigo}")
 	public ResponseEntity<Curso> getByCodigo(@PathVariable Integer codigo) {
 		Curso curso = cursoRepository.getById(codigo);
 		return ResponseEntity.ok().body(curso);

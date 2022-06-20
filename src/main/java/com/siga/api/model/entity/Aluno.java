@@ -50,4 +50,30 @@ public class Aluno implements Serializable {
 	@ManyToOne(targetEntity = Curso.class)
 	@JoinColumn(name = "CodigoCurso")
 	private Curso curso;
+
+	public int getRa() {
+		return ra;
+	}
+
+	public void setRa(int ra) {
+		this.ra = ra;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+	
+	
 }

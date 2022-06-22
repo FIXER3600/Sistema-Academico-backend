@@ -31,6 +31,11 @@ public class DisciplinaController {
 		return ResponseEntity.ok().body(disciplina);
 	}
 
+	@GetMapping("/curso/{codigoCurso}")
+	public List<Disciplina> getDisciplinaByCurso(@PathVariable int codigoCurso){
+		return disciplinaRepository.findDisciplinasByCurso(codigoCurso);
+	}
+	
 	@PostMapping("/curso/create")
 	public ResponseEntity<Disciplina> saveDisciplina(@RequestBody Disciplina disciplina) {
 		disciplina = disciplinaRepository.save(disciplina);

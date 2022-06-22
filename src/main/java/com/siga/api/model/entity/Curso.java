@@ -31,5 +31,37 @@ public class Curso {
 	@Column
 	private int carga_horaria;
 
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getLimite_alunos() {
+		return limite_alunos;
+	}
+
+	public void setLimite_alunos(int limite_alunos) {
+		this.limite_alunos = limite_alunos;
+	}
+
+	public int getCarga_horaria() {
+		return carga_horaria;
+	}
+
+	public void setCarga_horaria(int carga_horaria) {
+		this.carga_horaria = carga_horaria;
+	}
+
 	
 }

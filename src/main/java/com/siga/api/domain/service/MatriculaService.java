@@ -6,6 +6,7 @@ import com.siga.api.domain.repository.MatriculaRepository;
 import com.siga.api.model.entity.Aluno;
 import com.siga.api.model.entity.Disciplina;
 import com.siga.api.model.entity.Matricula;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

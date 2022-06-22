@@ -25,12 +25,17 @@ public class DisciplinaController {
 		return disciplinaRepository.findAll();
 	}
 
-	@GetMapping("/curso/{codigo}")
+	@GetMapping("/disciplina/{codigo}")
 	public ResponseEntity<Disciplina> getByCodigo(@PathVariable String codigo) {
 		Disciplina disciplina = disciplinaRepository.getById(codigo);
 		return ResponseEntity.ok().body(disciplina);
 	}
 
+	@GetMapping("/curso/{codigoCurso}")
+	public List<Disciplina> getDisciplinaByCurso(@PathVariable int codigoCurso){
+		return disciplinaRepository.findDisciplinasByCurso(codigoCurso);
+	}
+	
 	@PostMapping("/curso/create")
 	public ResponseEntity<Disciplina> saveDisciplina(@RequestBody Disciplina disciplina) {
 		disciplina = disciplinaRepository.save(disciplina);

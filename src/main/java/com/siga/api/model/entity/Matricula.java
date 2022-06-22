@@ -27,5 +27,35 @@ public class Matricula {
     private String codigoDisciplina;
     @Column(name = "NomeDisciplina")
     private String nomeDisciplina;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Integer getRaAluno() {
+		return raAluno;
+	}
+	public void setRaAluno(Integer raAluno) {
+		this.raAluno = raAluno;
+	}
+	public String getNomeAluno() {
+		return nomeAluno;
+	}
+	public void setNomeAluno(String nomeAluno) {
+		this.nomeAluno = nomeAluno;
+	}
+	public String getCodigoDisciplina() {
+		return codigoDisciplina;
+	}
+	public void setCodigoDisciplina(String codigoDisciplina) {
+		this.codigoDisciplina = codigoDisciplina;
+	}
+	public String getNomeDisciplina() {
+		return nomeDisciplina;
+	}
+	public void setNomeDisciplina(String nomeDisciplina) {
+		this.nomeDisciplina = nomeDisciplina;
+	}
 
 }

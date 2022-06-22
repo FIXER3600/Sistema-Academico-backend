@@ -38,16 +38,54 @@ import java.io.Serializable;
 		resultClass = Aluno.class
 				)
 public class Aluno implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int ra;
 
-	@Column
+	@Column(name = "Nome")
 	private String nome;
+	
+	@Column(name = "Genero")
+	private String genero;
 
 	@ManyToOne(targetEntity = Curso.class)
 	@JoinColumn(name = "CodigoCurso")
 	private Curso curso;
+
+	public int getRa() {
+		return ra;
+	}
+
+	public void setRa(int ra) {
+		this.ra = ra;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	
+	public String getGenero() {
+		return genero;
+	}
+	
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+	
+	
 }
